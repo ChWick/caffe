@@ -54,6 +54,15 @@ if(USE_LEVELDB)
   list(APPEND Caffe_LINKER_LIBS ${Snappy_LIBRARIES})
 endif()
 
+
+# ---[ Warp_ctc
+if(USE_WARP_CTC)
+  find_package(WarpCTC)
+  include_directories(SYSTEM ${WARP_CTC_INCLUDE_DIR})
+  add_definitions(-DUSE_WARP_CTC)
+  list(APPEND Caffe_LINKER_LIBS ${WARP_CTC_LIBRARIES})
+endif()
+
 # ---[ CUDA
 include(cmake/Cuda.cmake)
 if(NOT HAVE_CUDA)

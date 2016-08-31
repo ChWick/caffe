@@ -117,8 +117,11 @@ function(caffe_print_configuration_summary)
   caffe_status("  USE_OPENCV        :   ${USE_OPENCV}")
   caffe_status("  USE_LEVELDB       :   ${USE_LEVELDB}")
   caffe_status("  USE_LMDB          :   ${USE_LMDB}")
-  caffe_status("  USE_NCCL          :   ${USE_NCCL}")
+<<<<<<< d6571b76c50fa55a123c1b9ace1639ae306a77d3
   caffe_status("  USE_WARP_CTC      :   ${USE_WARP_CTC}")
+=======
+  caffe_status("  USE_NCCL          :   ${USE_NCCL}")
+>>>>>>> Switched multi-GPU to NCCL
   caffe_status("  ALLOW_LMDB_NOLOCK :   ${ALLOW_LMDB_NOLOCK}")
   caffe_status("")
   caffe_status("Dependencies:")
